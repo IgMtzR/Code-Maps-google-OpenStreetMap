@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div>
+                <div id="mapid" (click)="addMarker()"></div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <button class="btn btn-sm btn-outline-danger" (click)="cleanMarker()">Clean Marker</button>
+                            <button class="btn btn-sm btn-outline-success" (click)="coords()">Get Coords</button>
+                            <button class="btn btn-sm btn-outline-warning" (click)="listMarkers()">Add Markers</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="">Cordenadas: </label>
+                    <div class="row">
+                        <div class="col-1">
+                            <button class="btn btn-sm btn-copy" (click)="copyInputMessage(cordsinput)"
+                            value="click to copy">Copy</button>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="cords" id="cords" [(ngModel)]="cords"
+                        readonly="readonly" #cordsinput>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="">Link: </label>
+                    <div class="row">
+                        <div class="col-1">
+                            <button class="btn btn-sm btn-copy" (click)="copyInputMessage(urlinput)"
+                        value="click to copy">Copy</button>
+                        </div>
+                        <div class="col-1">
+                            <button class="btn btn-sm btn-success" (click)="Go()" value="click to copy">Go</button>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="url" id="url" [(ngModel)]="url" readonly="readonly"
+                        #urlinput>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

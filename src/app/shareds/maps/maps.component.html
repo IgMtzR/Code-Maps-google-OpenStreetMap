@@ -1,0 +1,93 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="card mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Google Maps</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Demo Google Maps</h6>
+                    <p class="card-text text-justify">Google Maps es un servidor de aplicaciones de mapas en la web que
+                        pertenece a
+                        Alphabet Inc. Ofrece imágenes de mapas desplazables, así como fotografías por satélite del mundo
+                        e incluso la ruta entre diferentes ubicaciones o imágenes a pie de calle con Google Street View,
+                        condiciones de tráfico en tiempo real (Google Traffic) y un calculador de rutas a pie, en coche,
+                        bicicleta (beta) y transporte público y un navegador GPS, Google Maps Go.</p>
+                    <button class="btn btn-outline-success" (click)="open(modal1)">Demo</button>
+                    <button class="btn btn-outline-warning" (click)="open1(modal3)">npm</button>
+                </div>
+            </div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">OpenStreetMap</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Demo OpenStreetMap</h6>
+                    <p class="card-text text-justify">OpenStreetMap (también conocido como OSM) es un proyecto
+                        colaborativo para
+                        crear mapas editables y libres. En lugar del mapa en sí, los datos generados por el proyecto se
+                        consideran su salida principal.</p>
+                    <button class="btn btn-outline-success" (click)="open(modal2)">Demo</button>
+                    <button class="btn btn-outline-warning" (click)="open1(modal4)">npm</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+
+<!-- Modals -->
+<!-- Modal GoogleMaps -->
+<ng-template #modal1 let-modal>
+    <div class="modal-body">
+        <app-googlemaps></app-googlemaps>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" (click)="modal.close()">Aceptar</button>
+    </div>
+</ng-template>
+
+<!-- Modal OpenStreetMap -->
+<ng-template #modal2 let-modal>
+    <div class="modal-body">
+        <app-openstreetmap></app-openstreetmap>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" (click)="modal.close()">Aceptar</button>
+    </div>
+</ng-template>
+
+
+<!-- Librerias requeridad -->
+<!-- Modal Librery google -->
+<ng-template #modal3 let-modal>
+    <div class="modal-header">
+        <h6>GoogleMaps</h6>
+        <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>ng add @ng-bootstrap/ng-bootstrap</p>
+        <p>npm install @agm/core@1.1.0</p>
+        <p>npm install @angular/google-maps</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" (click)="modal.close()">Aceptar</button>
+    </div>
+</ng-template>
+<!-- Modal Librery OpenStreetMap -->
+<ng-template #modal4 let-modal>
+    <div class="modal-header">
+        <h6>OpenStreetMap</h6>
+        <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>npm install leaflet</p>
+        <p>npm install esri-leaflet-geocoder</p>
+        <p>npm install --save leaflet-geosearch</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success btn-sm" (click)="modal.close()">Aceptar</button>
+    </div>
+</ng-template>

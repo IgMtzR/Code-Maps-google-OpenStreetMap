@@ -1,0 +1,136 @@
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+}
+.cabecera{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.img-fluid{
+    width: 75%;
+    margin-bottom: 30px;
+}
+.fa-bars{
+    color: #aa983f;
+}
+
+.menu{
+    background-color: #aa983f;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    /* box-shadow: 5px 0 10px rgba(0, 0, 0, .6); */
+}
+ .logo{
+     color: white;
+     font-size: 35px;
+     padding: 0 80px;
+     font-weight: bold;
+ }
+
+ .menu-items{
+     display: flex;
+     list-style: none;
+     margin-right: 30px;
+ }
+ .menu-items li{
+     border-radius:  3px;
+     margin: 0 5px;
+ }
+ .menu-items li a{
+     padding: 7px 13px;
+     text-decoration: none;
+     font-size: 18px;
+     display: block;
+     text-transform: uppercase;
+     color: white;
+ }
+
+ .menu-items li:hover, li:active{
+     background-color: rgba(0, 0, 0, .3);
+     transition: .5s;    
+}
+.btn-menu{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+ul.show{
+    top: 215px;
+}
+@media screen and (max-width: 1100px){
+    .logo{
+        font-size: 30px;
+        padding-left: 35px;
+    }
+    .img-fluid{
+        width: 75%;
+        margin: 10px;
+    }
+    .menu-items li a{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 858px){
+    .menu{
+        height: 65px;
+    }
+    .img-fluid{
+        width: 95%;
+    }
+    /* .btn-menu{
+        display: inline-flex;
+    } */
+
+ 
+    .menu-items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100%-65px);
+        background: #414141;
+        top: -150vw;
+         text-align: center;
+         transition: all .4s;
+         flex-direction: column;
+    }
+    .menu-items li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu-items li:hover{
+        background: none;
+    }
+    .menu-items li a{
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+    }
+    .menu-items li a:hover{
+        color: #e9183b;
+    }
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+@media screen and (max-width: 858) and (orientation: landscape){
+    .menu-items li{
+        margin: 5px 0 0 0;
+    }
+    .menu-items{
+        overflow: scroll;
+        height: calc(100%-65px);
+    }
+}
+
+

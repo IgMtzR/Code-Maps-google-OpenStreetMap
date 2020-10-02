@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div>
+                <div class="form-group">
+                    <input placeholder="buscar localización" autocorrect="off" autocapitalize="off" spellcheck="off"
+                        type="text" class="form-control" #search [formControl]="searchControl">
+                </div>
+                <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom" (mapClick)="click($event)">
+                    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+                </agm-map>
+            </div>
+            <div>
+                <label for="">Cordenadas: </label>
+                <div class="row">
+                    <div class="col-1">
+                        <button class="btn btn-sm btn-copy" (click)="copyInputMessage(cordsinput)"
+                            value="click to copy">Copy</button>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="cordsgoo" id="cordsgoo" [(ngModel)]="cords"
+                                readonly="readonly" #cordsinput>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="">Cordenadas: </label>
+                <div class="row">
+                    <div class="col-1">
+                        <button class="btn btn-sm btn-copy" (click)="copyInputMessage(urlinput)"
+                            value="click to copy">Copy</button>
+                    </div>
+                    <div class="col-1">
+                        <button class="btn btn-sm btn-success" (click)="Go()" value="click to copy">Go</button>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="urlgoo" id="urlgoo" [(ngModel)]="url"
+                                readonly="readonly" #urlinput>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
